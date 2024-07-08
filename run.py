@@ -23,7 +23,7 @@ def get_sales_data():
 
         data_str = input("Enter your data here: ")
         sales_data = data_str.split(",")
-        print(f"You entered: {sales_data}")
+        
 
         if validate_data(sales_data):
             print(f"You entered: {sales_data}")
@@ -63,4 +63,6 @@ def update_sales_worksheet(data):
 
 
 
-get_sales_data()
+data = get_sales_data()
+sales_data = [int(num) for num in data]
+update_sales_worksheet(sales_data)
